@@ -25,3 +25,7 @@ matrix-auth:latest
 gravatar:latest
 console-column-plugin:latest
 cloudfoundry:latest
+jobConfigHistory:latest
+disk-usage:latest
+strawboss:latest
+pegdown-formatter:latest
