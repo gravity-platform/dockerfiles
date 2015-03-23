@@ -29,3 +29,8 @@ jobConfigHistory:latest
 disk-usage:latest
 strawboss:latest
 pegdown-formatter:latest
+jenkins-jira-issue-updater:latest
+jira:latest
+JiraTestResultReporter:latest
+stashNotifier:latest
+hipchat:latest
