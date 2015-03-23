@@ -11,7 +11,6 @@ github-api:latest
 github:latest
 copyartifact:latest
 plain-credentials:latest
-config-file-provider:latest
 credentials:latest
 credentials-binding:latest
 discard-old-build:latest
@@ -25,3 +24,4 @@ cloudbees-folder:latest
 matrix-auth:latest
 gravatar:latest
 console-column-plugin:latest
+cloudfoundry:latest
