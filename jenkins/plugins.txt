@@ -12,9 +12,11 @@ github:latest
 copyartifact:latest
 plain-credentials:latest
 credentials:latest
+workflow-step-api:latest
 credentials-binding:latest
 ssh-agent:latest
 discard-old-build:latest
+config-file-provider:latest
 managed-scripts:latest
 envinject:latest
 instant-messaging:latest
