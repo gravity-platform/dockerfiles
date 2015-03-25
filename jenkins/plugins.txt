@@ -22,7 +22,7 @@ log-command:latest
 mailer:latest
 jabber:latest
 cloudbees-folder:latest
-matrix-auth:latest
+role-strategy:latest
 gravatar:latest
 console-column-plugin:latest
 cloudfoundry:latest
