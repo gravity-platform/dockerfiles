@@ -13,6 +13,7 @@ copyartifact:latest
 plain-credentials:latest
 credentials:latest
 credentials-binding:latest
+ssh-agent:latest
 discard-old-build:latest
 managed-scripts:latest
 envinject:latest
