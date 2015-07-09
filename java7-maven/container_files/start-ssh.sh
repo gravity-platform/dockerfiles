@@ -17,9 +17,4 @@ else
   grep -q "${SSH_PUB_KEY}" ~/.ssh/id_rsa.pub || echo "${SSH_PUB_KEY} imported_.key" > ~/.ssh/id_rsa.pub
 fi
 
-# run forever..
-for (( ; ; ))
-do
-   echo "Pres CTRL+C to stop..."
-   sleep 1
-done
+tail -f /dev/null
