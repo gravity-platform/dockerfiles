@@ -1,0 +1,13 @@
+jenkins:  http://jenkins.example.org
+repo: http://git.example.org/repo.git
+template: template-job
+namefmt: '{shortref}'
+overwrite: false
+enable: true
+
+ignore:
+  - 'refs/heads/.*-maintenance'
+
+refs:
+  - 'refs/heads/feature/.*'
+
