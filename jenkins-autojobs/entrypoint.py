@@ -9,7 +9,7 @@ class Entrypoint:
         if sys.argv[1] not in ['git', 'hg', 'svn']:
             self.error()
 
-        subprocess.call(['/usr/local/bin/jenkins-makejobs-' + sys.argv[1]] + sys.argv[2:] + ['/config.yml'])
+        sys.exit(subprocess.call(['/usr/local/bin/jenkins-makejobs-' + sys.argv[1]] + sys.argv[2:] + ['/config.yml']))
     def error(self):
         print('  Usage: docker run -v `pwd`/config.yml:/config.yml gravity-platform/jenkins-autojobs <git|svn|hg> [autojobs-args]')
         sys.exit(2)
