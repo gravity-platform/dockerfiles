@@ -14,6 +14,5 @@ class Entrypoint:
         print('  Usage: docker run -v `pwd`/config.yml:/config.yml gravity-platform/jenkins-autojobs <git|svn|hg> [autojobs-args]')
         sys.exit(2)
 
-
 if __name__ == '__main__':
     Entrypoint().main()
