@@ -1,0 +1,21 @@
+docker:
+    image: gravity-platform/docker-client
+    ports:
+        - "22"
+    environment:
+        SSH_USERNAME:
+        SSH_PASSWORD:
+        SSH_PUB_KEY:
+        DOCKER_HOST:
+        DOCKER_TLS_VERIFY:
+        DOCKER_CERT_PATH:
+        DOCKER_DRIVER:
+        DOCKER_NOWARN_KERNEL_VERSION:
+        DOCKER_RAMDISK:
+        DOCKER_TMPDIR:
+        HTTP_PROXY:
+        HTTPS_PROXY:
+        NO_PROXY:
+        DOCKER_MACHINE_NAME:
+        COMPOSE_PROJECT_NAME:
+        COMPOSE_FILE:
