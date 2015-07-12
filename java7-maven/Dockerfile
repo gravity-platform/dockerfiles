@@ -1,12 +1,12 @@
 FROM maven:3.3.3-jdk-7
 
 RUN \
-   apt-get update && \
-   apt-get install -y apt-utils
-
-RUN \
-    apt-get install -y git openssh-server && \
-    mkdir -p /var/run/sshd
+    apt-get update && \
+    apt-get install -y \
+        openssh-server && \
+    mkdir -p /var/run/sshd && \
+    rm -f /etc/ssh/ssh_host_* && \
+    apt-get clean
 
 EXPOSE 22
 

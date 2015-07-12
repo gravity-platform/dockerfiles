@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-# ensure it's stopped
-/etc/init.d/ssh stop
+ssh-keygen -A
 
 # copy key over..
 mkdir -p ~/.ssh
