@@ -1,10 +1,16 @@
-FROM jamesdbloom/docker-java7-maven
+FROM maven:3.3.3-jdk-7
 
 RUN \
-  apt-get install -y openssh-server
+   apt-get update && \
+   apt-get install -y apt-utils
 
-COPY container_files/start-ssh.sh /start-ssh.sh
-
-CMD bash /start-ssh.sh
+RUN \
+    apt-get install -y git openssh-server && \
+    mkdir -p /var/run/sshd
 
 EXPOSE 22
+
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["bash", "entrypoint.sh"]
+CMD ["/usr/sbin/sshd", "-D", "-f", "/etc/ssh/sshd_config"]

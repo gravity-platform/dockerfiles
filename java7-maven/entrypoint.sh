@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# ensure it runs
-/etc/init.d/ssh restart
+# ensure it's stopped
+/etc/init.d/ssh stop
 
 # copy key over..
 mkdir -p ~/.ssh
@@ -14,7 +14,6 @@ if [ -z "${SSH_PUB_KEY+xxx}" ] || [ -z "${SSH_PUB_KEY}" ]; then
   echo "WARNING: env variable \$SSH_PUB_KEY is not set. Please set it to have access to this container via SSH."
 else
   grep -q "${SSH_PUB_KEY}" ~/.ssh/authorized_keys || echo "${SSH_PUB_KEY} imported_.key" >> ~/.ssh/authorized_keys
-  grep -q "${SSH_PUB_KEY}" ~/.ssh/id_rsa.pub || echo "${SSH_PUB_KEY} imported_.key" > ~/.ssh/id_rsa.pub
 fi
 
-tail -f /dev/null
+exec "$@"
