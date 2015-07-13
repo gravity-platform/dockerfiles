@@ -13,7 +13,7 @@ Have a look at the individual images for usage details.
 * [gravityplatform/java7-maven](java7-maven/)
 * [gravityplatform/jenkins](jenkins/)
 * [gravityplatform/jenkins-autojobs](jenkins-autojobs/)
-* [gravutyplatform/php-fpm](php-fpm/)
+* [gravityplatform/php-fpm](php-fpm/)
 
 Some of these images contain a running sshd. They are menat to be used for
 runnning jenkins slave containers.
