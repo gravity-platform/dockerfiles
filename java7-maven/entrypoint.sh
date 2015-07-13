@@ -1,18 +1,29 @@
 #!/usr/bin/env bash
 
-ssh-keygen -A
+: ${SSH_USERNAME:=user}
+: ${SSH_USERPASS:=$(dd if=/dev/urandom bs=1 count=15 | base64)}
+: ${SSH_PUB_KEY:=}
 
-# copy key over..
-mkdir -p ~/.ssh
-if ! [[ -f ~/.ssh/authorized_keys ]]; then
-  echo "Creating new ~/.ssh/authorized_keys"
-  touch ~/.ssh/authorized_keys
-fi
+__create_user() {
+    # Create a user to SSH into as.
+    useradd -m $SSH_USERNAME
+    echo -e "$SSH_USERPASS\n$SSH_USERPASS" | (passwd --stdin $SSH_USERNAME)
 
-if [ -z "${SSH_PUB_KEY+xxx}" ] || [ -z "${SSH_PUB_KEY}" ]; then
-  echo "WARNING: env variable \$SSH_PUB_KEY is not set. Please set it to have access to this container via SSH."
-else
-  grep -q "${SSH_PUB_KEY}" ~/.ssh/authorized_keys || echo "${SSH_PUB_KEY} imported_.key" >> ~/.ssh/authorized_keys
-fi
+    SSH_KEYDIR="/home/${SSH_USERNAME}/.ssh/"
+    SSH_KEYFILE="${SSH_KEYDIR}authorized_keys"
+
+    [[ -d $SSH_KEYDIR ]] || mkdir -p $SSH_KEYDIR
+    [[ -f $SSH_KEYFILE ]] || touch $SSH_KEYFILE
+
+    grep -q "$SSH_PUB_KEY" $SSH_KEYFILE || echo "$SSH_PUB_KEY" >> $SSH_KEYFILE
+}
+
+
+__create_hostkeys() {
+    ssh-keygen -A
+}
+
+__create_hostkeys
+__create_user
 
 exec "$@"
