@@ -15,5 +15,5 @@ Have a look at the individual images for usage details.
 * [gravityplatform/jenkins-autojobs](jenkins-autojobs/)
 * [gravityplatform/php-fpm](php-fpm/)
 
-Some of these images contain a running sshd. They are menat to be used for
+Some of these images contain a running sshd. They are meant to be used for
 runnning jenkins slave containers.
