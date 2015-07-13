@@ -7,7 +7,7 @@
 __create_user() {
     # Create a user to SSH into as.
     useradd -m $SSH_USERNAME
-    echo -e "$SSH_USERPASS\n$SSH_USERPASS" | (passwd --stdin $SSH_USERNAME)
+    echo "$SSH_USERNAME:$SSH_USERPASS" | chpasswd
 
     SSH_KEYDIR="/home/${SSH_USERNAME}/.ssh/"
     SSH_KEYFILE="${SSH_KEYDIR}authorized_keys"
