@@ -7,6 +7,6 @@ A simple docker container with java 7 and maven running sshd. Supports authorize
 ```bash
 docker run --rm -d -P \
     -e SSH_USERNAME=$USER \
-    -e SSH_PUB_KEY=$(cat ~/.ssh/id_rsa.pub) 
+    -e SSH_PUB_KEY=$(cat ~/.ssh/id_rsa.pub) \
     gravityplatform/java7-maven 
 ```
