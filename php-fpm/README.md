@@ -10,7 +10,9 @@ this image.
 The following command hosts the current directory as webapp.
 
 ```bash
-docker run --rm -v `pwd`/:/var/www/html gravityplatform/php-fpm
+docker run --rm -P \
+    -v `pwd`/:/var/www/html \
+    gravityplatform/php-fpm
 ```
 
 You can now use a webserver like apache or nginx in front of this.
