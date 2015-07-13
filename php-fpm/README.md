@@ -10,7 +10,7 @@ this image.
 The following command hosts the current directory as webapp.
 
 ```bash
-docker run --rm -P \
+docker run -d -P \
     -v `pwd`/:/var/www/html \
     gravityplatform/php-fpm
 ```

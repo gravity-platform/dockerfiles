@@ -5,5 +5,5 @@ Run jenkins in docker with some default plugins.
 ## Usage
 
 ```bash
-docker run --rm -d -P gravityplatform/jenkins
+docker run -d -P gravityplatform/jenkins
 ```
