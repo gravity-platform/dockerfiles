@@ -4,5 +4,5 @@ a simple docker container with java 7 and maven.. supports authorized-keys-injec
 so one can do
 
 ```
-docker run -d --env="SSH_PUB_KEY=<key>" -p 1123:22 <image-name>
+docker run --rm -d -e SSH_USERNAME=$USER -e SSH_PUB_KEY=$(cat ~/.ssh/id_rsa.pub) -P gravityplatform/java7-maven 
 ```
