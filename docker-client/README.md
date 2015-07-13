@@ -7,7 +7,7 @@ Docker client with ssh daemon for use as jenkins build-slave. Comes with ``docke
 ### native docker cli
 
 ```bash
-docker run --rm -d -e SSH_USERNAME=$USER -e SSH_PUB_KEY=$(cat ~/.ssh/id_rsa.pub) -P gravity-platform/docker-client
+docker run --rm=false -d -e SSH_USERNAME=$USER -e SSH_PUB_KEY=$(cat ~/.ssh/id_rsa.pub) -P gravity-platform/docker-client
 ```
 
 ### docker-compose
