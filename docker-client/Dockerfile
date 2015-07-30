@@ -10,6 +10,9 @@ RUN yum install -y \
     && echo "Installing docker-compose" \
     && curl -L https://github.com/docker/compose/releases/download/1.3.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose \
     && chmod +x /usr/local/bin/docker-compose \
+    && echo "Installing docker-swarm" \
+    && curl -L https://github.com/docker/compose/releases/download/1.3.3/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose \
+    && chmod +x /usr/local/bin/docker-compose \
     && yum clean all
 
 ADD entrypoint.sh /entrypoint.sh
