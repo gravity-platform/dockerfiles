@@ -6,6 +6,8 @@ gravity-platform.
 ## Usage
 
 Have a look at the individual images for usage details.
+If needed set http_proxy ENV in corresponding Dockerfile.
+--build-arg for docker-build will be available with docker 1.9
 
 ## Images
 

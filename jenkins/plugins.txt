@@ -1,9 +1,10 @@
+authentication-tokens:latest
 durable-task:latest
 token-macro:latest
 docker-plugin:latest
 docker-build-step:latest
 docker-build-publish:latest
-dockerhub:latest
+docker-commons:latest
 scm-api:latest
 git-client:latest
 git:latest
