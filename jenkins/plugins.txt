@@ -1,4 +1,5 @@
 authentication-tokens:latest
+build-token-root:latest
 durable-task:latest
 token-macro:latest
 docker-plugin:latest
