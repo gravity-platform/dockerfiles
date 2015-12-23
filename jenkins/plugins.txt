@@ -40,3 +40,4 @@ JiraTestResultReporter:latest
 stashNotifier:latest
 hipchat:latest
 email-ext:latest
+htmlpublisher:latest
