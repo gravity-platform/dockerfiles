@@ -16,6 +16,7 @@ If needed set http_proxy ENV in corresponding Dockerfile.
 * [gravityplatform/jenkins](jenkins/)
 * [gravityplatform/jenkins-autojobs](jenkins-autojobs/)
 * [gravityplatform/php-fpm](php-fpm/)
+* [gravityplatform/redsocks](redsocks/)
 
 Some of these images contain a running sshd. They are meant to be used for
 runnning jenkins slave containers.
